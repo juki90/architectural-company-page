@@ -1,0 +1,47 @@
+@import "variables.scss";
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  z-index: 2;
+  &__logo {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    background-image: url("assets/images/logo.svg");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    a {
+      display: block;
+      padding-left: 50px;
+      color: $default-color;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+  }
+  & > .container {
+    display: flex;
+    align-items: center;
+    padding: 5px 1em 0 1em;
+  }
+}
+
+.navigation {
+  margin-left: auto;
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+  &__list-item {
+    list-style-type: none;
+    margin-left: 1em;
+  }
+  &__item-link {
+    text-decoration: none;
+  }
+}
