@@ -5,11 +5,31 @@ $header-height: 45px;
 $default-font-family: "Noto Serif KR", serif;
 
 // Colors
+
+$primary-color: #ff8833;
+$secondary-color: #ddff33;
+
 $default-body-background-color: #ffffff;
 $default-color: #333333;
 
-$default-link-color: #c22;
-$default-link-color-active: #f00;
+$default-link-color: $primary-color;
+$default-link-color-active: lighten($primary-color, 10);
+
+$section-company-background-image: linear-gradient(
+  315deg,
+  rgba(255, 255, 255, 0.5046219171262255) 0%,
+  rgba(191, 191, 191, 0.8015406846332283) 20%,
+  rgba(224, 224, 224, 0.8043418050814075) 80%,
+  rgba(255, 255, 255, 0.5018207966780462) 100%
+);
+$section-projects-background-image: linear-gradient(
+  0deg,
+  rgba(199, 199, 199, 1) 0%,
+  rgba(191, 191, 191, 0.8015406846332283) 20%,
+  rgba(106, 106, 106, 0.8043418050814075) 80%,
+  rgba(42, 42, 42, 0.798739564185049) 100%
+);
+$section-careers-background-color: #565656;
 
 // Responsive widths
 

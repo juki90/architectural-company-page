@@ -11,11 +11,13 @@ const { src, dest, watch, series, parallel } = require("gulp"),
   clean = require("gulp-clean"),
   uglify = require("gulp-uglify"),
   image = require("gulp-image"),
-  browserSync = require("browser-sync").create();
+  webpack = require("webpack-stream");
+browserSync = require("browser-sync").create();
 
 const path = {
   scssPath: "src/scss/**/*.scss",
   jsPath: "src/app/**/*.js",
+  jsMain: "src/app/main.js",
   htmlPath: "src/**/*.html",
   indexHtml: "src/index.html",
   imagesPath: "src/assets/**/*.*",
@@ -31,8 +33,27 @@ const scssTask = () => {
 };
 
 const jsTask = () => {
-  return src(path.jsPath)
-    .pipe(concat("bundle.js"))
+  return src(path.jsMain)
+    .pipe(
+      webpack({
+        module: {
+          rules: [
+            {
+              use: {
+                loader: "babel-loader",
+                options: {
+                  presets: ["@babel/preset-env"],
+                },
+              },
+            },
+          ],
+        },
+        output: {
+          filename: "bundle.js",
+        },
+        mode: "production",
+      })
+    )
     .pipe(uglify())
     .pipe(dest("dist"));
 };
@@ -102,7 +123,7 @@ const cleanAfter = () => {
 
 const watchTask = () => {
   watch(
-    [path.scssPath, path.jsPath, path.indexHtml],
+    [path.scssPath, path.jsPath, path.indexHtml, path.imagesPath],
     series(
       cleanBefore,
       handleImages,

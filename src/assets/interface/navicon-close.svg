@@ -3,8 +3,18 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<circle fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" cx="20" cy="20" r="18.161"/>
-<polygon fill="#FFFFFF" points="8.613,16.735 19.778,28.116 31.387,16.726 "/>
+<g>
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M37.941,33.008c0,2.2-1.8,4-4,4H6.446
+		c-2.2,0-4-1.8-4-4V6.837c0-2.2,1.8-4,4-4h27.496c2.2,0,4,1.8,4,4V33.008z"/>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="10.042" y1="29.881" x2="29.959" y2="9.964"/>
+	</g>
+	<g>
+		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="29.959" y1="29.881" x2="10.042" y2="9.965"/>
+	</g>
+</g>
 <g>
 </g>
 <g>
