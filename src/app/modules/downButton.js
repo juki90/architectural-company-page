@@ -7,7 +7,7 @@ const handleButtonClick = (e) => {
 
   const rafFunc = () => {
     rafID = requestAnimationFrame(rafFunc);
-    if (counter >= scrollTo - 80) {
+    if (counter >= scrollTo - 90) {
       cancelAnimationFrame(rafID);
     }
     counter += 30;

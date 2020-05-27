@@ -36,34 +36,11 @@ const handlePopState = (e) => {
 const handleLinkClick = (e) => {
   e.preventDefault();
   const navToStr = e.target.getAttribute("href"),
-    scrollTo = document.querySelector(navToStr).offsetTop;
-  let rafID,
-    counter = document.querySelector("html").scrollTop;
+    scrollTo = document.querySelector(navToStr).offsetTop - 60;
 
   handleClickNavigation();
 
-  if (counter < scrollTo) {
-    requestAnimationFrame(() => rafFunc(-1));
-    counter = scrollTo - 300;
-  }
-  if (counter > scrollTo) {
-    requestAnimationFrame(() => rafFunc(1));
-    counter = scrollTo + 300;
-  }
-
-  const rafFunc = (a) => {
-    rafID = requestAnimationFrame(() => rafFunc(a));
-
-    a < 0 ? (counter += 20) : (counter -= 20);
-
-    if (a < 0 && counter >= scrollTo - 60) {
-      cancelAnimationFrame(rafID);
-    }
-    if (a > 0 && counter <= scrollTo - 50) {
-      cancelAnimationFrame(rafID);
-    }
-    window.scrollTo(0, counter);
-  };
+  window.scrollTo(0, scrollTo);
 };
 
 navicon.addEventListener("click", handleClickNavigation);

@@ -20,7 +20,7 @@
 }
 
 .intro-content {
-  margin: 27% auto 20% auto;
+  margin: 20% auto 20% auto;
   text-align: center;
   z-index: 2;
   &__image {
@@ -55,7 +55,7 @@
 
 .intro-button {
   position: absolute;
-  bottom: 3%;
+  bottom: 3vh;
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
@@ -151,7 +151,7 @@ ol {
   box-shadow: 0 0 12px 2px rgba(#ccc, 0.25);
   border-radius: 4px;
   padding: 0.5em 1em;
-  font-size: 0.75em;
+  font-size: 0.9em;
   background-color: $default-link-color;
   letter-spacing: 1px;
   color: #000;
